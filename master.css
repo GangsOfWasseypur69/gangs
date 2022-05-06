@@ -1,5 +1,5 @@
 :root {
-    --gradient1: linear-gradient(135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    --gradient1: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 }
 
 @keyframes background-anim {
@@ -91,12 +91,40 @@
     }
 }
 
+@keyframes pop-div-left {
+    from{
+        transform-origin: bottom left;
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+
+@keyframes pop-div-right {
+    from{
+        transform-origin: bottom right;
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+
+@keyframes pop-div-center {
+    from{
+        transform-origin: center;
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+
 body{
     margin: 0;
     padding: 0;
     background: black;
-    width: 100vw;
-    height: 100vh;
     animation: background-anim 500ms ease forwards;
     animation-play-state: paused;
 }
@@ -148,3 +176,15 @@ body{
     animation: tagline-animation 2000ms ease forwards;
     animation-play-state: paused;
 }
+
+#pop-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: cornsilk;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    z-index: 2;
+}
+

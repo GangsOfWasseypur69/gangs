@@ -39,13 +39,13 @@ setTimeout(() => {
     <div class="wrapper">
 
         <section id="col-container">
-        <button class="cols" onclick="modalshow(this.id)" id="about">
+        <button class="cols" onclick="showDiv(this.id)" id="about">
             <h2>About Us</h2>
         </button>
-        <button class="cols" onclick="modalshow(this.id)" id="service">
+        <button class="cols" onclick="showDiv(this.id)" id="service">
             <h2>Services</h2>
         </button>
-        <button class="cols" onclick="modalshow(this.id)" id="contact">
+        <button class="cols" onclick="showDiv(this.id)" id="contact">
             <h2>Contact Us</h2>
         </button>
         </section>
@@ -64,3 +64,35 @@ setTimeout(() => {
     crosshair.style.animationPlayState = 'running';
     logo.style.animationPlayState = 'running';
 }, 6000);
+
+function showDiv(btnId){
+    const popDiv = document.querySelector("#pop-div");
+    popDiv.style = `visibility: visible;`;
+    if (btnId == "about"){
+    popDiv.style.animation = 'pop-div-left 500ms ease forwards';
+    popDiv.innerHTML = `
+        <h1>this is the about div</h1>
+        <button onclick="getBack()">get back</button>
+    `;
+    }
+    else if (btnId == "service"){
+    popDiv.style.animation = 'pop-div-center 500ms ease forwards';
+    popDiv.innerHTML = `
+        <h1>this is the services div</h1>
+        <button onclick="getBack()">get back</button>
+    `;
+    }
+    else if (btnId == "contact"){
+        popDiv.style.animation = 'pop-div-right 500ms ease forwards';
+        popDiv.innerHTML = `
+        <h1>this is the contact us div</h1>
+        <button onclick="getBack()">get back</button>
+    `;
+    }
+}
+
+function getBack(){
+    const popDiv = document.querySelector("#pop-div");
+    popDiv.style = `visibility: hidden;`;
+    popDiv.innerHTML = null;
+}
