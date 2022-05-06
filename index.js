@@ -1,10 +1,21 @@
 const logo = document.querySelector("#logo");
 const content = document.querySelector("#content");
+const body = document.querySelector("body");
+const crosshair = document.querySelector("#crosshair")
 
 // final logo animation (2000 ms) starts after crosshair animations finishes @ 1500ms
 setTimeout(() => {
-    logo.style.animationPlayState = 'running';
+     body.style.animationPlayState = 'running';
+     crosshair.style.animation = 'fill-xhair 500ms ease forwards';
 }, 1500);
+
+setTimeout(()=>{
+    // TODO : Moving gradient
+},2000);
+
+setTimeout(() =>{
+    logo.style.animationPlayState = 'running'; 
+},3500);
 
 // final logo animation pauses @ 1000ms (1000 left) to make time for col animation
 setTimeout(() => {
@@ -47,7 +58,7 @@ setTimeout(() => {
         </div>
     </div>
     `;
-}, 2500);
+}, 4500);
 
 // final logo animation resumes after 500 ms
 setTimeout(() => {
@@ -56,7 +67,7 @@ setTimeout(() => {
         col[i].style.animation = 'abc';
     }
     logo.style.animationPlayState = 'running';
-}, 3000);
+}, 5000);
 
 function modalshow(caller)
 {

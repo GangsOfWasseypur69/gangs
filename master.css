@@ -1,12 +1,19 @@
 :root {
     --gradient1: linear-gradient(135deg, crimson, antiquewhite);
-    --gradient2: linear-gradient(red, blue);
 }
 
 body{
-    background: var(--gradient1);
+    background: black;
     width: 100vw;
     height: 100vh;
+    animation: background-anim 500ms ease forwards;
+    animation-play-state: paused;
+}
+
+@keyframes background-anim {
+    to{
+        background: var(--gradient1);
+    }
 }
 
 #logo {
@@ -22,8 +29,15 @@ body{
 }
 
 #crosshair {
+    fill: antiquewhite;
     z-index: 1;
-    animation: aim-animation 1500ms ease forwards;
+    animation: aim-animation 1500ms ease;
+}
+
+@keyframes fill-xhair {
+    to{
+        fill: black;
+    }
 }
 
 @keyframes aim-animation {
@@ -31,15 +45,15 @@ body{
         transform: translateY(-650px);
     }
 
-    70% {
-        transform: translateY(200px)
+    50% {
+        transform: translateY(200px);
     }
 
     100% {
-        transform: translateY(0)
+        transform: translateY(0);
     }
-
 }
+
 
 @keyframes final-animation {
     50%{
