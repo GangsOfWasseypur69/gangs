@@ -9,7 +9,8 @@ function modalshow(caller)
         <a href="his-site.com" class="card">
         <h3 id='card-head'>Aishwarya Funaguskar</h3>
         <div id='card-img'>Image</div>
-        <p id='card-text'>Age: 19
+        <p id='card-text'>
+        Age: 19<br>
         Tech Stack: HTML, CSS, PHP, XAMPP
         </p>
     </a>
@@ -17,7 +18,8 @@ function modalshow(caller)
     <a href="his-site.com" class="card">
         <h3 id='card-head'>Aru Gupta</h3>
         <div id='card-img'>Image</div>
-        <p id='card-text'>Age: 22
+        <p id='card-text'>
+        Age: 22<br>
         Tech Stack: HTML, CSS, JS, React, Node
         </p>
     </a>
@@ -25,7 +27,8 @@ function modalshow(caller)
     <a href="his-site.com" class="card">
         <h3 id='card-head'>Ishaan Pandita</h3>
         <div id='card-img'>Image</div>
-        <p id='card-text'>Age: 19
+        <p id='card-text'>
+        Age: 19<br>
         Tech Stack: HTML, CSS, Python
         </p>
     </a>
@@ -33,7 +36,8 @@ function modalshow(caller)
     <a href="his-site.com" class="card">
         <h3 id='card-head'>Murriel Rodrigues</h3>
         <div id='card-img'>Image</div>
-        <p id='card-text'>Age: 19
+        <p id='card-text'>
+        Age: 19<br>
         Tech Stack: HTML, CSS, JS
         </p>
     </a>
@@ -41,7 +45,8 @@ function modalshow(caller)
     <a href="his-site.com" class="card">
         <h3 id='card-head'>Rahul Pathak</h3>
         <div id='card-img'>Image</div>
-        <p id='card-text'>Age: 19
+        <p id='card-text'>
+        Age: 19<br>
         Tech Stack: HTML, CSS, JS, Solidity
         </p>
     </a>
@@ -49,7 +54,8 @@ function modalshow(caller)
     <a href="his-site.com" class="card">
         <h3 id='card-head'>Vidyadhar Reddy</h3>
         <div id='card-img'>Image</div>
-        <p id='card-text'>Age: 19
+        <p id='card-text'>
+        Age: 19<br>
         Tech Stack: HTML, CSS, JS, React, Node
         </p>
     </a>
@@ -59,21 +65,32 @@ function modalshow(caller)
     else if(caller == 'service')
     {
         document.querySelector('#modal-subhead').innerText = 'Services';
-        document.querySelector('#modal-text').innerHTML = `<section class="card">
-        <h3>Enterprise</h3>
-        <p>Details</p>
-    </section>
-    <section class="card">
-        <h3>Enterprise</h3>
-        <p>Details</p>
-    </section>
+        document.querySelector('#modal-text').innerHTML = `
+        <section id='card-wrapper'>
+        <div class="card">
+        <h3 id='card-head'>Enterprise</h3>
+        <div id='card-img'>Image</div>
+        <p id='card-text'>
+        All our tech services, on a professional level for your whole business. From setting up websites to processing your data, all in one spot, all by the same gang.
+        </p>
+        </div>
+
+        <div class="card">
+        <h3 id='card-head'>Individual</h3>
+        <div id='card-img'>Image</div>
+        <p id='card-text'>
+        Tech Support at its best, and tuned to perfection as per your individual needs!
+        </p>
+        </div>
+        </section>
     `;
  
     }
     else if(caller == 'contact')
     {
         document.querySelector('#modal-subhead').innerText = 'Contact Us';
-        document.querySelector('#modal-text').innerHTML = `<form action="insert.php" method="POST">
+        document.querySelector('#modal-text').innerHTML = `
+        <form action="insert.php" method="POST">
         <table>
             <tr>
                 <td>Name :</td>
@@ -93,10 +110,8 @@ function modalshow(caller)
             <td><textarea name="feedback" placeholder="Write something.." style="width:200px;height: 100px; "></textarea>
             </td>
         </tr>
-            <tr>
-                <td><input type="submit" value="Submit" name="submit"></td>
-            </tr>
         </table>
+        <input id="sub_button" type="submit" value="Submit" name="submit">
     </form>
     `;
  
