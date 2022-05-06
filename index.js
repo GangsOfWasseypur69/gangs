@@ -184,7 +184,7 @@ function showDiv(btnId){
         popDiv.style.animation = 'pop-div-right 500ms ease forwards';
         popDiv.innerHTML = `
         <h2 class="section-head">Get in touch!</h2>
-    <form action="insert.php" method="POST">
+    <form action="feedback.php" method="POST">
         <section id="formbox">
             <div class="answer">
                 <input type="text" name="name" required placeholder="Enter Your Name">
