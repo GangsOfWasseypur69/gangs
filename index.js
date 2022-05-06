@@ -1,23 +1,34 @@
 const logo = document.querySelector("#logo");
 const content = document.querySelector("#content");
 const body = document.querySelector("body");
-const crosshair = document.querySelector("#crosshair")
+const crosshair = document.querySelector("#crosshair");
+const tagline = document.querySelector("#tagline");
 
-// final logo animation (2000 ms) starts after crosshair animations finishes @ 1500ms
+// aim animation runs for the first 2000ms with background gradient change and x-hair color change
 setTimeout(() => {
      body.style.animationPlayState = 'running';
      crosshair.style.animation = 'fill-xhair 500ms ease forwards';
 }, 1500);
 
+// this is when the tagline appears 
 setTimeout(()=>{
     // TODO : Moving gradient
+    tagline.style.animationPlayState = 'running';
 },2000);
 
-setTimeout(() =>{
-    logo.style.animationPlayState = 'running'; 
-},3500);
+// tagline pauses
+setTimeout(() => {
+    tagline.style.animationPlayState = 'paused';
+},3400);
 
-// final logo animation pauses @ 1000ms (1000 left) to make time for col animation
+// tagline resumes along with the final logo animation
+setTimeout(() => {
+    logo.style.animationPlayState = 'running'; 
+    tagline.style.animationPlayState = 'running';
+    // tagline.style.animation = 'final-animation 2000ms ease forwards';
+},4000);
+
+// final logo animation pauses @ 5000ms and resumes after 1000ms (time for the col-animation)
 setTimeout(() => {
     logo.style.animationPlayState = 'paused';
     content.innerHTML = `
@@ -35,68 +46,15 @@ setTimeout(() => {
         </button>
         </section>
         <!-- <button type="button" id="caller" onclick="modalshow(this.id)">Modal</button> -->
-
-        <div class="modal fade" id="Modal" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
-                    </div>
-                    <div class="modal-body">
-                        <h5 id="modal-subhead">Subhead</h5>
-                        <p id="modal-text">Some text in the modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </div>
     `;
-}, 4500);
+}, 5000);
 
-// final logo animation resumes after 500 ms
+// final logo animation resumes after 1000 ms
 setTimeout(() => {
     const col = document.querySelectorAll("#col-container button");
     for(let i = 0; i < col.length; i++){
         col[i].style.animation = 'abc';
     }
     logo.style.animationPlayState = 'running';
-}, 5000);
-
-function modalshow(caller)
-{
-    let modal_id = 'Modal';
-    document.querySelector('.modal-body').innerHTML = `<h3>This came from query</h3><p>this is a list of services we provide</p><ul><li>Item</li><li>Item</li><li>Item</li><li>Item</li><li>Item</li><li>Item</li><li>Item</li></ul><form action="insert.php" method="POST">
-    <table>
-        <tr>
-            <td>Name :</td>
-            <td><input type="text" name="name" required></td>
-        </tr>
-
-        <tr>
-            <td>Email :</td>
-            <td><input type="email" name="email" required></td>
-        </tr>
-        <tr>
-
-        <tr>
-        <tr>
-
-        <td>Feedback: </td>
-        <td><textarea name="feedback" placeholder="Write something.." style="width:200px;height: 100px; "></textarea>
-        </td>
-    </tr>
-        <tr>
-            <td><input type="submit" value="Submit" name="submit"></td>
-        </tr>
-    </table>
-</form>`;
-    document.querySelector(".modal-title").innerText = `${caller} Name`;
-    $("#"+modal_id).modal({backdrop: true});
-}
+}, 6000);
