@@ -71,21 +71,21 @@ function showDiv(btnId){
     if (btnId == "about"){
     popDiv.style.animation = 'pop-div-left 500ms ease forwards';
     popDiv.innerHTML = `
-        <h1>this is the about div</h1>
+    
         <button onclick="getBack()">get back</button>
     `;
     }
     else if (btnId == "service"){
     popDiv.style.animation = 'pop-div-center 500ms ease forwards';
     popDiv.innerHTML = `
-        <h1>this is the services div</h1>
+    
         <button onclick="getBack()">get back</button>
     `;
     }
     else if (btnId == "contact"){
         popDiv.style.animation = 'pop-div-right 500ms ease forwards';
         popDiv.innerHTML = `
-        <h1>this is the contact us div</h1>
+        
         <button onclick="getBack()">get back</button>
     `;
     }

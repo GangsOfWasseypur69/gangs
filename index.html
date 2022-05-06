@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="./master.css">
     <title>Document</title>
 </head>
 
@@ -35,7 +35,101 @@
             d="M501.304688 412.769531V383.65625c0-48.910156-42.820313-88.933594-95.914063-88.933594-53.089844 0-95.914063 40.023438-95.914063 88.933594v29.113281c0 4.058594 3.320313 7.378907 7.378907 7.378907 4.058593 0 7.378906-3.320313 7.378906-7.378907V383.65625c0-41.132812 36.519531-74.179688 81.15625-74.179688s81.160156 33.046876 81.160156 74.179688v29.113281c0 4.058594 3.320313 7.378907 7.378907 7.378907 4.054687 0 7.375-3.320313 7.375-7.378907Zm0 0" />
     </svg>
     <div id="tagline"><h2>This is the tagline</h2></div>
+
     <div id="content"></div>
+
+    <h2 class="section-head">About Us</h2>
+    <section id='card-wrapper'>
+        <div class="card">
+            <h3 id='card-head'>Aishwarya Funaguskar</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, PHP, XAMPP
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 id='card-head'>Aru Gupta</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 22<br>
+                Tech Stack: HTML, CSS, JS, React, Node
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 id='card-head'>Ishaan Pandita</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, Python
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 id='card-head'>Murriel Rodrigues</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, JS
+            </p>
+        </div>
+        
+        <div class="card">
+            <h3 id='card-head'>Rahul Pathak</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, JS, Solidity
+            </p>
+        </div>
+        
+        <div class="card">
+            <h3 id='card-head'>Vidyadhar Reddy</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, JS, React, Node
+            </p>
+        </div>
+    </section>
+
+    <h2 class="section-head">Services We Provide</h2>
+    <section id='card-wrapper'>
+        <div class="card">
+            <h3 id='card-head'>Enterprise</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                All our tech services, on a professional level for your whole business. From setting up websites to
+                processing your data, all in one spot, all by the same gang.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h3 id='card-head'>Individual</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Tech Support at its best, and tuned to perfection as per your individual needs!
+            </p>
+        </div>
+    </section>
+
+    <h2 class="section-head">Get in touch!</h2>
+    <form action="insert.php" method="POST">
+        <section id="formbox">
+            <div class="answer">
+                <input type="text" name="name" required placeholder="Enter Your Name">
+            </div>
+            <div class="answer">
+                <input type="email" name="email" required placeholder="Enter Your Email">
+            </div>
+            <div class="answer">
+                <textarea name="feedback" placeholder="Let us know your thoughts!" style="width:200px; height: 100px;"></textarea>
+            </div>
+        </section>
+        <input id="sub_button" type="submit" value="Submit" name="submit">
+    </form>
     <div id="pop-div"></div>
     <script src="index.js" type="text/javascript"></script>
 </body>
