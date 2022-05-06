@@ -74,57 +74,82 @@ function showDiv(btnId){
     <h2 class="section-head">About Us</h2>
     <section id='card-wrapper'>
         <div class="card">
-            <h3 id='card-head'>Aishwarya Funaguskar</h3>
+        <div class="card__overlay">
+        <div class="overlay__text">
+          <h3 id='card-head'>Aishwarya Funaguskar</h3>
             <div id='card-img'>Image</div>
             <p id='card-text'>
                 Age: 19<br>
                 Tech Stack: HTML, CSS, PHP, XAMPP
             </p>
         </div>
+      </div>
+    </div>
 
         <div class="card">
+        <div class="card__overlay">
+        <div class="overlay__text">
+        
             <h3 id='card-head'>Aru Gupta</h3>
             <div id='card-img'>Image</div>
             <p id='card-text'>
                 Age: 22<br>
                 Tech Stack: HTML, CSS, JS, React, Node
             </p>
+            </div>
+            </div>
         </div>
 
         <div class="card">
+        <div class="card__overlay">
+        <div class="overlay__text">
             <h3 id='card-head'>Ishaan Pandita</h3>
             <div id='card-img'>Image</div>
             <p id='card-text'>
                 Age: 19<br>
                 Tech Stack: HTML, CSS, Python
             </p>
+            </div>
+            </div>
         </div>
 
         <div class="card">
+        <div class="card__overlay">
+        <div class="overlay__text">
             <h3 id='card-head'>Murriel Rodrigues</h3>
             <div id='card-img'>Image</div>
             <p id='card-text'>
                 Age: 19<br>
                 Tech Stack: HTML, CSS, JS
             </p>
+            </div>
+            </div>
         </div>
         
         <div class="card">
+        <div class="card__overlay">
+        <div class="overlay__text">
             <h3 id='card-head'>Rahul Pathak</h3>
             <div id='card-img'>Image</div>
             <p id='card-text'>
                 Age: 19<br>
                 Tech Stack: HTML, CSS, JS, Solidity
             </p>
+            </div>
+            </div>
         </div>
         
         <div class="card">
+        <div class="card__overlay">
+        <div class="overlay__text">
             <h3 id='card-head'>Vidyadhar Reddy</h3>
             <div id='card-img'>Image</div>
             <p id='card-text'>
                 Age: 19<br>
                 Tech Stack: HTML, CSS, JS, React, Node
             </p>
+            </div>
+            </div>
         </div>
     </section>
         <button onclick="getBack()">get back</button>
