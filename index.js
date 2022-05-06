@@ -7,8 +7,12 @@ const tagline = document.querySelector("#tagline");
 // aim animation runs for the first 2000ms with background gradient change and x-hair color change
 setTimeout(() => {
      body.style.animationPlayState = 'running';
-     crosshair.style.animation = 'fill-xhair 500ms ease forwards';
+     crosshair.style.animation = 'fill-xhair 1000ms ease forwards';
 }, 1500);
+
+setTimeout(() => {
+    crosshair.style.animationPlayState = 'paused';
+},2000);
 
 // this is when the tagline appears 
 setTimeout(()=>{
@@ -56,5 +60,7 @@ setTimeout(() => {
     for(let i = 0; i < col.length; i++){
         col[i].style.animation = 'abc';
     }
+    logo.style.fill = 'antiquewhite';
+    crosshair.style.animationPlayState = 'running';
     logo.style.animationPlayState = 'running';
 }, 6000);

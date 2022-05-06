@@ -9,8 +9,11 @@
 }
 
 @keyframes fill-xhair {
-    to{
+    50%{
         fill: black;
+    }
+    100%{
+        fill: antiquewhite;
     }
 }
 
@@ -128,8 +131,9 @@ body{
     width: 100%;
     padding: 5px;
     bottom: 0;
-    border: 1px solid black;
-    background: linear-gradient(#999 0%, #666 100%);
+    color: antiquewhite;
+    border: 1px solid #010223;
+    background: #010223;
     animation: col-animation 500ms ease forwards;
 }
 
