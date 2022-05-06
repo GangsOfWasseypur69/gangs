@@ -1,0 +1,109 @@
+:root {
+    --gradient1: linear-gradient(135deg, crimson, antiquewhite);
+    --gradient2: linear-gradient(red, blue);
+}
+
+body{
+    background: var(--gradient1);
+    width: 100vw;
+    height: 100vh;
+}
+
+#logo {
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    animation: final-animation 2000ms ease forwards;
+    animation-play-state: paused;
+}
+
+#crosshair {
+    z-index: 1;
+    animation: aim-animation 1500ms ease forwards;
+}
+
+@keyframes aim-animation {
+    0% {
+        transform: translateY(-650px);
+    }
+
+    70% {
+        transform: translateY(200px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+
+}
+
+@keyframes final-animation {
+    50%{
+        transform: translate(-50%, -60rem);
+        height: 3rem;
+        width: 3rem;    
+    }
+    100%{
+        position: absolute;
+        transform: translate(-50%, -20rem);
+        height: 3rem;
+        width: 3rem;    
+    }
+}
+
+#col-container{
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+#col-container button{
+    width: 100%;
+    padding: 5px;
+    bottom: 0;
+    border: 1px solid black;
+    background: linear-gradient(#999 0%, #666 100%);
+    animation: col-animation 500ms ease forwards;
+}
+
+#col-container button:hover{
+    cursor: pointer;
+    background: var(--gradient1);
+    animation: hue-rotate 1s linear infinite alternate;
+}
+
+@keyframes col-animation {
+    from{
+        height: 0;
+    }
+    to{
+        height: 100vh;
+    }
+}
+
+@keyframes hue-rotate {
+    to{
+        filter: hue-rotate(90deg);
+    }
+}
+
+#Modal
+{
+    justify-content: center;
+    text-align: center;
+}
+#Modal li
+{
+    text-align: left;
+}
+form
+{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
