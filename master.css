@@ -1,5 +1,21 @@
 :root {
-    --gradient1: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    /* --gradient1: linear-gradient(135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 200% 200%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @keyframes background-anim {
@@ -19,11 +35,11 @@
 
 @keyframes aim-animation {
     0% {
-        transform: translateY(-650px);
+        transform: translateY(-10vh);
     }
 
     50% {
-        transform: translateY(200px);
+        transform: translateY(50vh);
     }
 
     100% {
@@ -34,13 +50,13 @@
 
 @keyframes final-animation {
     50%{
-        transform: translate(-50%, -60rem);
+        transform: translate(-50%, -100vh);
         height: 3rem;
         width: 3rem;    
     }
     100%{
         position: absolute;
-        transform: translate(-50%, -20rem);
+        transform: translate(-50%, -47vh);
         height: 3rem;
         width: 3rem;    
     }
@@ -69,7 +85,7 @@
         opacity: 0;
     }
     70%{
-        top: 65%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 1;
@@ -90,14 +106,13 @@
         transform: translate(50%, 50%);
     }
 }
-
 @keyframes pop-div-left {
-    0%{
+    from{
         transform-origin: bottom left;
         transform: rotate(-90deg);
     }
-    100%{
-        transform: rotate(0deg);
+    to{
+        transform: rotate(0);
     }
 }
 
@@ -123,47 +138,19 @@
     }
 }
 
-@keyframes clear-div-left {
-    0%{
-        transform-origin: bottom left;
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(-90deg);
-    }
-
-}
-
-@keyframes clear-div-right {
-    from{
-        transform-origin: bottom right;
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(90deg);
-    }
-}
-
-@keyframes clear-div-center {
-    from{
-        transform-origin: center;
-        transform: scale(0);
-        /* transform: rotate(690deg); */
-    }
-    to{
-        transform: scale(1);
-        /* transform: rotate(0); */
-    }
-}
-
 body{
+    background: var(--gradient1) no-repeat;
+    background: black;
     margin: 0;
     padding: 0;
-    background: black;
     animation: background-anim 500ms ease forwards;
     animation-play-state: paused;
+    text-align: center;
 }
-
+/* h2
+{
+    font-size: vh;
+} */
 #logo {
     height: 10rem;
     width: 10rem;
@@ -183,35 +170,36 @@ body{
 }
 
 
-
 #col-container{
     display: flex;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #col-container button{
-    width: 100%;
-    padding: 5px;
+    width: 33.33vw;
     bottom: 0;
     color: antiquewhite;
     border: 1px solid #010223;
     background: #010223;
     animation: col-animation 500ms ease forwards;
+    transition: background 500ms;
 }
 
 #col-container button:hover{
     cursor: pointer;
     background: var(--gradient1);
-    animation: hue-rotate 1s linear infinite alternate;
+    /* animation: hue-rotate 1s linear infinite alternate; */
 }
 
 #tagline{
     position: absolute;
     animation: tagline-animation 2000ms ease forwards;
     animation-play-state: paused;
+    text-align: center;
 }
 
+/* POPUP STUFF */
 #pop-div{
     position: absolute;
     top: 0;
@@ -223,3 +211,76 @@ body{
     z-index: 2;
 }
 
+section
+{
+    justify-content: center;
+    text-align: center;
+    background: none;
+}
+form
+{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#card-wrapper
+{
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,40vw));
+}
+ .card
+{
+    border: 1px solid;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+.card:hover
+{
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.5);
+}
+#card-text
+{
+    text-align: justify;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: justify;
+}
+form *
+{
+    padding: 10px;
+}
+form input, form textarea
+{
+    border-radius: 20px;
+    border: 1px solid;
+    overflow: auto;
+    transition: box-shadow 500ms;
+}
+form input:focus, form textarea:focus
+{
+    box-shadow: 0 0 2px 4px rgba(0,0,0,0.2);
+}
+#sub_button
+{
+    background: lightblue;
+    border-radius: 20px;
+    border: none;
+}
+#closebtn
+{
+    border-radius: 20px;
+    border: none;
+}

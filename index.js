@@ -71,28 +71,115 @@ function showDiv(btnId){
     if (btnId == "about"){
     popDiv.style.animation = 'pop-div-left 500ms ease forwards';
     popDiv.innerHTML = `
-        <h1>this is the about div</h1>
-        <button id="aboutGetBack" onclick="getBack(this.id)">get back</button>
+    <h2 class="section-head">About Us</h2>
+    <section id='card-wrapper'>
+        <div class="card">
+            <h3 id='card-head'>Aishwarya Funaguskar</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, PHP, XAMPP
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 id='card-head'>Aru Gupta</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 22<br>
+                Tech Stack: HTML, CSS, JS, React, Node
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 id='card-head'>Ishaan Pandita</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, Python
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 id='card-head'>Murriel Rodrigues</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, JS
+            </p>
+        </div>
+        
+        <div class="card">
+            <h3 id='card-head'>Rahul Pathak</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, JS, Solidity
+            </p>
+        </div>
+        
+        <div class="card">
+            <h3 id='card-head'>Vidyadhar Reddy</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Age: 19<br>
+                Tech Stack: HTML, CSS, JS, React, Node
+            </p>
+        </div>
+    </section>
+        <button onclick="getBack()">get back</button>
     `;
     }
     else if (btnId == "service"){
     popDiv.style.animation = 'pop-div-center 500ms ease forwards';
     popDiv.innerHTML = `
-        <h1>this is the services div</h1>
-        <button id="servicesGetBack" onclick="getBack(this.id)">get back</button>
+    <h2 class="section-head">Services We Provide</h2>
+    <section id='card-wrapper'>
+        <div class="card">
+            <h3 id='card-head'>Enterprise</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                All our tech services, on a professional level for your whole business. From setting up websites to
+                processing your data, all in one spot, all by the same gang.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h3 id='card-head'>Individual</h3>
+            <div id='card-img'>Image</div>
+            <p id='card-text'>
+                Tech Support at its best, and tuned to perfection as per your individual needs!
+            </p>
+        </div>
+    </section>
+        <button onclick="getBack()">get back</button>
     `;
     }
     else if (btnId == "contact"){
         popDiv.style.animation = 'pop-div-right 500ms ease forwards';
         popDiv.innerHTML = `
-        <h1>this is the contact us div</h1>
-        <button id="contact-Getback" onclick="getBack(this.id)">get back</button>
+        <h2 class="section-head">Get in touch!</h2>
+    <form action="insert.php" method="POST">
+        <section id="formbox">
+            <div class="answer">
+                <input type="text" name="name" required placeholder="Enter Your Name">
+            </div>
+            <div class="answer">
+                <input type="email" name="email" required placeholder="Enter Your Email">
+            </div>
+            <div class="answer">
+                <textarea name="feedback" placeholder="Let us know your thoughts!" style="width:200px; height: 100px;"></textarea>
+            </div>
+        </section>
+        <input id="sub_button" type="submit" value="Submit" name="submit">
+    </form>
+        <button onclick="getBack()">get back</button>
     `;
     }
 }
 
-function getBack(btnId){
+function getBack(){
     const popDiv = document.querySelector("#pop-div");
-    popDiv.style = 'visibility: hidden;';
+    popDiv.style = `visibility: hidden;`;
     popDiv.innerHTML = null;
 }
