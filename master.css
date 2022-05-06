@@ -114,10 +114,12 @@
 @keyframes pop-div-center {
     from{
         transform-origin: center;
-        transform: rotate(180deg);
+        transform: scale(0);
+        /* transform: rotate(690deg); */
     }
     to{
-        transform: rotate(0);
+        transform: scale(1);
+        /* transform: rotate(0); */
     }
 }
 
