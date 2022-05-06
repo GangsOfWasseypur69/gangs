@@ -92,12 +92,12 @@
 }
 
 @keyframes pop-div-left {
-    from{
+    0%{
         transform-origin: bottom left;
         transform: rotate(-90deg);
     }
-    to{
-        transform: rotate(0);
+    100%{
+        transform: rotate(0deg);
     }
 }
 
@@ -112,6 +112,39 @@
 }
 
 @keyframes pop-div-center {
+    from{
+        transform-origin: center;
+        transform: scale(0);
+        /* transform: rotate(690deg); */
+    }
+    to{
+        transform: scale(1);
+        /* transform: rotate(0); */
+    }
+}
+
+@keyframes clear-div-left {
+    0%{
+        transform-origin: bottom left;
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-90deg);
+    }
+
+}
+
+@keyframes clear-div-right {
+    from{
+        transform-origin: bottom right;
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes clear-div-center {
     from{
         transform-origin: center;
         transform: scale(0);

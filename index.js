@@ -72,27 +72,27 @@ function showDiv(btnId){
     popDiv.style.animation = 'pop-div-left 500ms ease forwards';
     popDiv.innerHTML = `
         <h1>this is the about div</h1>
-        <button onclick="getBack()">get back</button>
+        <button id="aboutGetBack" onclick="getBack(this.id)">get back</button>
     `;
     }
     else if (btnId == "service"){
     popDiv.style.animation = 'pop-div-center 500ms ease forwards';
     popDiv.innerHTML = `
         <h1>this is the services div</h1>
-        <button onclick="getBack()">get back</button>
+        <button id="servicesGetBack" onclick="getBack(this.id)">get back</button>
     `;
     }
     else if (btnId == "contact"){
         popDiv.style.animation = 'pop-div-right 500ms ease forwards';
         popDiv.innerHTML = `
         <h1>this is the contact us div</h1>
-        <button onclick="getBack()">get back</button>
+        <button id="contact-Getback" onclick="getBack(this.id)">get back</button>
     `;
     }
 }
 
-function getBack(){
+function getBack(btnId){
     const popDiv = document.querySelector("#pop-div");
-    popDiv.style = `visibility: hidden;`;
+    popDiv.style = 'visibility: hidden;';
     popDiv.innerHTML = null;
 }
