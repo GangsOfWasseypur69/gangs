@@ -43,13 +43,13 @@ body{
 
 @keyframes final-animation {
     50%{
-        transform: translate(-50%, -600px);
+        transform: translate(-50%, -60rem);
         height: 3rem;
         width: 3rem;    
     }
     100%{
         position: absolute;
-        transform: translate(-50%, -465px);
+        transform: translate(-50%, -20rem);
         height: 3rem;
         width: 3rem;    
     }
@@ -67,6 +67,7 @@ body{
     bottom: 0;
     border: 1px solid black;
     background: linear-gradient(#999 0%, #666 100%);
+    animation: col-animation 500ms ease forwards;
 }
 
 #col-container button:hover{
@@ -75,6 +76,14 @@ body{
     animation: hue-rotate 1s linear infinite alternate;
 }
 
+@keyframes col-animation {
+    from{
+        height: 0;
+    }
+    to{
+        height: 100vh;
+    }
+}
 
 @keyframes hue-rotate {
     to{

@@ -51,6 +51,10 @@ setTimeout(() => {
 
 // final logo animation resumes after 500 ms
 setTimeout(() => {
+    const col = document.querySelectorAll("#col-container button");
+    for(let i = 0; i < col.length; i++){
+        col[i].style.animation = 'abc';
+    }
     logo.style.animationPlayState = 'running';
 }, 3000);
 
