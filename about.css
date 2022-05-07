@@ -1,0 +1,204 @@
+:root {
+    --mainfont: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    height: 100vh;
+    grid-gap: 10px;
+    position: fixed;
+}
+
+.grid-item1 {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/586/603/742/minimalism-4k-for-mac-desktop-wallpaper-preview.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.grid-item2 {
+    background-image: url("images/Murriel.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/2;
+    grid-row: 2/5;
+    padding-top: 75%;
+    text-align: center;
+    color:rgba(0, 0, 0, 0);
+}
+
+.grid-item2:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/Murriel.jpg');
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.5);
+    color: antiquewhite;
+}
+
+.grid-item3 {
+    background-image: url("https://images.ctfassets.net/hrltx12pl8hq/7KnylCE0DRfVVVFbzEu4Ss/67577874cce064933e8776a2008d30fe/wallpapers-stock-images.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/5;
+    grid-row: 5/5;
+}
+
+.grid-item4 {
+    background-image: url("images/Aru.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 2/4;
+    grid-row: 2/5;
+    padding-top: 37%;
+    text-align: center;
+    color:rgba(0, 0, 0, 0);
+}
+
+
+.grid-item4:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/Aru.jpg');
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.5);
+    text-align: center;
+    color: antiquewhite;
+}
+
+.grid-item5 {
+    background-image: url("images/Rahul.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 4/6;
+    grid-row: 1/3;
+    padding-top: 21%;
+    text-align: center;
+    color:rgba(0, 0, 0, 0);
+}
+
+
+.grid-item5:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/Rahul.jpg');
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.5);
+    color: antiquewhite;
+}
+
+.grid-item6 {
+    background-image: url("images/Viddy.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 4/5;
+    grid-row: 3/5;
+    padding-top: 37%;
+    text-align: center;
+    color:rgba(0, 0, 0, 0);
+}
+
+
+.grid-item6:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/Viddy.jpg');
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.5);
+    color: antiquewhite;
+}
+
+.grid-item7 {
+    background-image: url("images/Aishwarya.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 5/6;
+    grid-row: 3/6;
+    padding-top: 75%;
+    text-align: center;
+    color:rgba(0, 0, 0, 0);
+}
+
+
+.grid-item7:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/Aishwarya.jpg');
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.5);
+    color: antiquewhite;
+}
+
+.grid-item8 {
+    background-image: url("images/Ishaan.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 6/8;
+    grid-row: 1/6;
+    padding-top: 75%;
+    text-align: center;
+    color:rgba(0, 0, 0, 0);
+}
+
+
+.grid-item8:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/Ishaan.jpg');
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.5);
+    color: antiquewhite;
+}
+
+#cover {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes rm-cover {
+    to{
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+#main-content *{
+    z-index: 2;
+    text-align: center;
+}
+
+#big-name {
+    color: antiquewhite;
+    font-family: var(--mainfont);
+    font-size: 800%;
+    text-align: center;
+    position: relative;
+    visibility: hidden;
+    display: block;
+    animation: text-anim 1000ms 500ms ease forwards;
+}
+
+#getback{
+    visibility: hidden;
+    z-index: 200;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    border: none;
+}
+
+
+@keyframes text-anim {
+    0% {
+        visibility:visible;
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    50% {
+        visibility: visible;
+        transform: translateY(165%);
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        transform: translateY(-70%);
+        opacity: 0;
+    }
+}

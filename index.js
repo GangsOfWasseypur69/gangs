@@ -71,89 +71,58 @@ function showDiv(btnId){
     if (btnId == "about"){
     popDiv.style.animation = 'pop-div-left 500ms ease forwards';
     popDiv.innerHTML = `
-    <h2 class="section-head">About Us</h2>
-    <section id='card-wrapper'>
-        <div class="card">
-        <div class="card__overlay">
-        <div class="overlay__text">
-          <h3 id='card-head'>Aishwarya Funaguskar</h3>
-            <div id='card-img'>Image</div>
-            <p id='card-text'>
-                Age: 19<br>
-                Tech Stack: HTML, CSS, PHP, XAMPP
-            </p>
+    <div id="cover"></div>
+    <div class="grid">
+        <div class="grid-item1"></div>
+        <div class="grid-item2">
+        <h3 id='card-head'>Murriel Rodrigues</h3>
+            Age: 19<br>
+            Tech Stack: HTML, CSS, JS
         </div>
-      </div>
-    </div>
-
-        <div class="card">
-        <div class="card__overlay">
-        <div class="overlay__text">
-        
-            <h3 id='card-head'>Aru Gupta</h3>
-            <div id='card-img'>Image</div>
-            <p id='card-text'>
-                Age: 22<br>
-                Tech Stack: HTML, CSS, JS, React, Node
-            </p>
-            </div>
-            </div>
+        <div class="grid-item3"></div>
+        <div class="grid-item4">
+        <h3 id='card-head'>Aru Gupta</h3>      
+            Age: 22<br>
+            Tech Stack: HTML, CSS, JS, React, Node, Django
         </div>
-
-        <div class="card">
-        <div class="card__overlay">
-        <div class="overlay__text">
-            <h3 id='card-head'>Ishaan Pandita</h3>
-            <div id='card-img'>Image</div>
-            <p id='card-text'>
-                Age: 19<br>
-                Tech Stack: HTML, CSS, Python
-            </p>
-            </div>
-            </div>
-        </div>
-
-        <div class="card">
-        <div class="card__overlay">
-        <div class="overlay__text">
-            <h3 id='card-head'>Murriel Rodrigues</h3>
-            <div id='card-img'>Image</div>
-            <p id='card-text'>
-                Age: 19<br>
-                Tech Stack: HTML, CSS, JS
-            </p>
-            </div>
-            </div>
-        </div>
-        
-        <div class="card">
-        <div class="card__overlay">
-        <div class="overlay__text">
-            <h3 id='card-head'>Rahul Pathak</h3>
-            <div id='card-img'>Image</div>
-            <p id='card-text'>
+        <div class="grid-item5">
+        <h3 id='card-head'>Rahul Pathak</h3>
                 Age: 19<br>
                 Tech Stack: HTML, CSS, JS, Solidity
-            </p>
-            </div>
-            </div>
         </div>
-        
-        <div class="card">
-        <div class="card__overlay">
-        <div class="overlay__text">
-            <h3 id='card-head'>Vidyadhar Reddy</h3>
-            <div id='card-img'>Image</div>
-            <p id='card-text'>
+        <div class="grid-item6">
+        <h3 id='card-head'>Vidyadhar Reddy</h3>
+            
                 Age: 19<br>
                 Tech Stack: HTML, CSS, JS, React, Node
-            </p>
-            </div>
-            </div>
+        
         </div>
-    </section>
-        <button onclick="getBack()">get back</button>
+        <div class="grid-item7">
+        <h3 id='card-head'>Aishwarya Funaguskar</h3>
+            Age: 19<br>
+            Tech Stack: HTML, CSS, PHP, XAMPP
+        </div>
+        <div class="grid-item8">
+        <h3 id='card-head'>Ishaan Pandita</h3>
+            Age: 19<br>
+            Tech Stack: HTML, CSS, Python
+        </div>
+    </div>
+    <div id="main-content">
+        <div id="big-name">Gangs Of WaseyPur</div>
+        <button onclick="getBack()" id="getback">Get Back</button>
     `;
+    setTimeout(() => {
+        document.querySelector("#cover").style.animation = 'rm-cover 500ms ease forwards';
+        // const murial = document.querySelector("#grid-item2");
+        // const aru = document.querySelector("#grid-item4");
+        // const rahul = document.querySelector("#grid-item5");
+        // const viddy = document.querySelector("#grid-item6");
+        // const ash = document.querySelector("#grid-item7");
+        // const ishaan = document.querySelector("#grid-item8");
+        document.querySelector(".grid").style.zIndex = '100';
+        document.querySelector("#getback").style.visibility = 'visible';
+    }, 1500);
     }
     else if (btnId == "service"){
     popDiv.style.animation = 'pop-div-center 500ms ease forwards';
@@ -184,7 +153,7 @@ function showDiv(btnId){
         popDiv.style.animation = 'pop-div-right 500ms ease forwards';
         popDiv.innerHTML = `
         <h2 class="section-head">Get in touch!</h2>
-    <form action="feedback.php" method="POST">
+    <form action="insert.php" method="POST">
         <section id="formbox">
             <div class="answer">
                 <input type="text" name="name" required placeholder="Enter Your Name">
